@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javafile with DOM</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<style type="text/css">
+
+.done{
+	text-decoration: line-through;
+	 font-size: 2em; }
+ /*	#first{color:rgb(6, 117, 24); }*/ 
+
+ li{color: red; 
+ 	font-size: 1em;
+ 	display: block;} 
+ P{color: orange; font-size: 2em; }
+
+.bor{
+	border:3px solid black;
+	width: 300px;
+	background-color: wheat;
+	font-weight: bolder;
+	font-size: 2em;
+}
+ .red{
+ 	background: yellow; 
+ 	border:3px solid black;
+	width: 300px;
+	color: red;
+	text-align: center;
+
+	font-weight: bolder;
+	font-size: 2em;
+	font-variant-caps: all-small-caps
+} 
+.blue{color:blue; 
+	border:3px solid black;
+	width: 300px;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 2em;
+	font-variant-caps: all-small-caps;
+}
+.green{
+	border:3px solid black;
+	width: 300px;
+	color: green;
+	text-align: center;
+	background-color: wheat;
+	font-weight: bolder;
+	font-size: 2em;
+	font-variant-caps: all-small-caps}
+a{
+	text-decoration: none;}
+ol>li{
+	margin-right: 10px;
+	display: inline;
+	font-size: 2em;
+
+}
+.remove{
+	background-color: red;
+	color: white;
+	font-size: 1.5em;
+	border-radius: 30px;
+}
+</style>
+</head>
+<body>	
+<h1 class="first">To do list</h1>
+	<p id="first">Jobs to do today</p>
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+	<p> tempor incididunt ut labore et dolore magna aliqua.</p>
+	<p class="sec">This is class text</p>
+<table>
+	<tr><td>
+	<ul class="own">
+		<li class="" >Wake up </li>
+		<li class=" ">brush teech</li>
+		<li>take shower</li>
+		<li>go to work</li>
+		<li>play footbal</li>
+	</ul> 
+	</td>
+	<td>
+	<ol>
+		<li>
+			<button onclick="red();">Red</button></li>
+			<li><button onclick="green();">green</button></li>
+			 <li><button onclick="blue();">Blue</button></li>
+			 <li><button onclick="cut_line();">Cut by line</button></li>
+	</ol>
+		</td>
+			<td>
+	<ol> Apply on all: <br>
+		<li>
+			<button onclick="redall();">yellow all</button></li>
+			<li><button onclick="skyall();">Skyblue all</button></li>
+			 <li><button onclick="pinkall();">pink all</button></li>
+<!-- 			 <li><button onclick="cut_lineall();">Cut by line all</button></li> -->
+			 <li><button onclick="remall();" class="remove">Remove all</button></li>
+
+	</ol>
+		</td>
+			</tr>
+	<tr>
+	
+		<th  colspan="3" style="font-size: 2em;">	 Define color </th></tr>
+		<td>
+			<p class="red"> red</p>
+		</td>
+		<td>
+			<p class="green">green</p>
+		</td>
+		<td>
+			<p class="blue">BLUE</p></td>
+
+	</tr>
+
+</table>
+	<script type="text/javascript">
+		function red(){
+		var red=document.querySelector("li");
+		red.classList.toggle("red");
+		
+		}
+	function green(){
+		var green =document.querySelector("li");
+		green.classList.toggle("green");
+
+		}
+	function blue(){
+		var blue=document.querySelector("li");
+		blue.classList.toggle("blue");
+			
+		}
+
+		function rem(){
+		var rem_=document.querySelector("li");
+		rem_.remove()
+// document.querySelector("h1").innerText="this is a nes list"
+
+		}
+		function cut_line(){
+			var cut_ =document.querySelector("li");
+		cut_.classList.toggle("done");
+
+
+		}
+		function redall(){
+		var red2, i;
+		var red2=document.querySelectorAll(".own")
+		 for (i = 0; i < red2.length; i++) {
+    	red2[i].style.backgroundColor = "yellow";
+		// red2.classList.toggle("red");
+			}
+		}
+
+		function remall(){
+		var rem_=document.querySelector("li");
+		rem_.remove()
+// document.querySelector("h1").innerText="this is a nes list"
+
+		}
+
+	function skyall(){
+		var red3, i;
+		var red3=document.querySelectorAll(".own")
+		 for (i = 0; i < red3.length; i++) {
+    	red3[i].style.backgroundColor = "skyblue";
+		// red2.classList.toggle("red");
+			}
+		}
+	function pinkall(){
+		var red4, i;
+		var red4=document.querySelectorAll(".own")
+		 for (i = 0; i < red4.length; i++) {
+    	red4[i].style.backgroundColor = "pink";
+		// red2.classList.toggle("red");
+			}
+		}
+
+	</script>
+
+</body>
+</html>
+
+<!-- getElementsByTagName
+example 
+
+document.getElementsByTagName("li")
+
+getElementsByClassName
+example
+document.getElementsByClassName("red")
+
+getElementById
+example:
+document.getElementById("first") 
+<p id=​"first">​Jobs to do today​</p>​
+
+querySelector
+example:
+document.querySelector("li")
+
+querySelectorAll
+example
+document.querySelectorAll("li")
+document.querySelectorAll("li,h1")
+
+getAttribute
+document.querySelector("li").getAttribute("random")
+"23"
+setAttribute
+document.querySelector("li").setAttribute("random",100)
+output :"100"
+
+##Changing Styles
+style.{property} //ok
+document.querySelector("h1").style.background="blue"
+document.querySelector("h1").style.color="red" 
+className //best
+var h1= document.querySelector('h1')
+then run :
+h1.className="sec"
+output: "sec"
+
+#classList.add
+example
+document.querySelector("li").classList.add("done")
+Multiple rupe can define 1
+document.querySelector("li").classList.add("done")
+Multiple rupe can define 2
+document.querySelector("li").classList.add("sec")
+Multiple rupe can define 3
+document.querySelector("li").classList.add("red_c")
+
+#classList.remove:
+for remove styleing:
+document.querySelector("li").classList.remove("red_c")
+
+#classList.toggle
+my_style.classList.toggle("done")
+again and again remove and add
+my_style.classList.toggle("done")
+
+#Bonus Command
+
+#innerHTML
+example:
+document.querySelector("h1").innerText="this is a nes list"
+as well as  can use this
+document.querySelector("h1").innerHTML="to do list 1"
+"to do list 1"
+
+#parentElement
+example 
+document.querySelectorAll("li")[3].parentElement;
+<ul> </ul> is li parent 
+two time parent will be show body :
+document.querySelectorAll("li")[3].parentElement.parentElement;
+body
+
+
+example 2 for list index wise selection 
+document.querySelectorAll("li")[1]
+document.querySelectorAll("li")[3]
+#children
+document.querySelectorAll("li")[3].parentElement.children;
+
+##It is important to CACHE selectors in variables
+ -->

@@ -1,0 +1,85 @@
+
+getElementsByTagName
+example 
+
+document.getElementsByTagName("li")
+
+getElementsByClassName
+example
+document.getElementsByClassName("red")
+
+getElementById
+example:
+document.getElementById("first") 
+<p id=​"first">​Jobs to do today​</p>​
+
+querySelector
+example:
+document.querySelector("li")
+
+querySelectorAll
+example
+document.querySelectorAll("li")
+document.querySelectorAll("li,h1")
+
+getAttribute
+document.querySelector("li").getAttribute("random")
+"23"
+setAttribute
+document.querySelector("li").setAttribute("random",100)
+output :"100"
+
+##Changing Styles
+style.{property} //ok
+document.querySelector("h1").style.background="blue"
+document.querySelector("h1").style.color="red" 
+className //best
+var h1= document.querySelector('h1')
+then run :
+h1.className="sec"
+output: "sec"
+
+#classList.add
+example
+document.querySelector("li").classList.add("done")
+Multiple rupe can define 1
+document.querySelector("li").classList.add("done")
+Multiple rupe can define 2
+document.querySelector("li").classList.add("sec")
+Multiple rupe can define 3
+document.querySelector("li").classList.add("red_c")
+
+#classList.remove:
+for remove styleing:
+document.querySelector("li").classList.remove("red_c")
+
+#classList.toggle
+my_style.classList.toggle("done")
+again and again remove and add
+my_style.classList.toggle("done")
+
+#Bonus Command
+
+#innerHTML
+example:
+document.querySelector("h1").innerText="this is a nes list"
+as well as  can use this
+document.querySelector("h1").innerHTML="to do list 1"
+"to do list 1"
+
+#parentElement
+example 
+document.querySelectorAll("li")[3].parentElement;
+<ul> </ul> is li parent 
+two time parent will be show body :
+document.querySelectorAll("li")[3].parentElement.parentElement;
+body
+
+
+example 2 for list index wise selection 
+document.querySelectorAll("li")[1]
+document.querySelectorAll("li")[3]
+#children
+document.querySelectorAll("li")[3].parentElement.children;
+
+##It is important to CACHE selectors in variables
