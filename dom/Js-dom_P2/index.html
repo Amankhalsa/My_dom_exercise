@@ -5,14 +5,31 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-<body>
-	<center><div>
-<button class="favorite styled"  type="button" onclick="demo();"> Demo</button>
-<button class="favorite styled"  type="button">Add to favorites</button>
+<body >
+	<div class="bg-image">hi </div>
+	 <!-- onload="alert ('Welcome to this site');" -->
+	 <!-- onunload="window.alert('You've left the site and you haven't bought anything.');" -->
+	 <!-- Enter Your Name: <input type="text" onkeyup="alert('You released a Key');"/> -->
+
+	 <!-- 
+		Java script events 
+	 	http://www.learningaboutelectronics.com/Articles/Javascript-onkeyup-event-handler.php -->
+	<center><div class="main">
+<button class="favorite styled"  type="button" onclick="var a=prompt('enter Name:');
+document.getElementById('hello').innerHTML=a;
+">Prompt</button>
+<button class="favorite styled"  type="button" onclick="alert('This is a Alert')">Alert</button>
+<button class="favorite styled"  type="button" onclick="print()"> Print</button>
+<button class="favorite styled"  type="button" onclick="confirm('you want to close');"> confirm</button>
+<button class="favorite styled"  type="button" onclick="window.close();"> Close</button>
+
+<p id="hello"></p>
 
 <h1>To do list</h1>
 <p id="first">Jobs to do today</p>
-<input id="userinput" type="text" placeholder="enter items"><button class="favorite styled"  type="button" id="enter">Add to favorites</button>
+<!-- onkeyup="confirm('you wanta enter');" -->
+<input id="userinput" type="text" placeholder="enter items"  >
+<button class="favorite styled"  type="button" id="enter">Add to favorites</button>
 	<p id="demo"></p>
 	
 	<ul>	
@@ -23,23 +40,42 @@
 		<li>play footbal</li>
 			
 	</ul>
+<a href="https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes">java script key code</a>
+<a href="http://www.learningaboutelectronics.com/Projects/">learn electronics</a>
 
-	<script type="text/javascript" src="java.js"></script>
+<a href="http://www.learningaboutelectronics.com/Articles/Javascript-close-function.php#:~:text=Store-,Javascript%2D%20Close()%20Function,look%20at%20the%20below%20example.">open/close window</a>
+	<script type="text/javascript" src="java.js">
+		
+var button2 = document.getElementById('demo');
+button2.addEventListener("mouseenter",function(){
+	document.getElementById("demo").remove();
+		
+	</script>
 
 <ol><li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/Events"> Official site</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/Events"> 
+Official site</a>
 </li>
 <li>	
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events">  Mouse events </a>
-	</li>
+</li>
 <li>			
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"> buttons</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">
+ buttons</a>
 </li><li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"> Form Input</a></li><li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event">  events </a></li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"> 
+Form Input</a>
+</li><li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event">  events </a>
+
+
+</li>
 </ol>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div class="loader"></div>
 </div></center>
+<!-- <img width="444" height="332" alt="Pond"
+src="ft1.JPG"
+onabort="window.alert('The image hasn\'t loaded completely yet. You haven\'t seen the full image.');"> -->
+
 </body>
 </html>

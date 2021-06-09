@@ -21,71 +21,57 @@
 // })
 
 // example5
-var button = document.getElementById('enter');
-var input= document.getElementById("userinput");
-var ul= document.querySelector("ul");
+// var button = document.getElementById('enter');
+// var input= document.getElementById("userinput");
+// var ul= document.querySelector("ul");
 
-button.addEventListener("click",function(){
-if(input.value.length > 0){
-
-	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value))
-	ul.appendChild(li);
-
-	console.log(input.value)
-	input.value=""
-
-
-}else {
-	if (true) {
-	document.getElementById("demo").innerHTML="<span style='color:red; font-weight:bolder; font-size:2em;'>Please enter value</span>";
-
+// button.addEventListener("click",function(){
+// if(input.value.length > 0){
+// 	var li = document.createElement("li");
+// 	li.appendChild(document.createTextNode(input.value))
+// 	ul.appendChild(li);
+// 	input.value=""
+// }
+// else {
 	
-}
-
-
-
-}	
-})
-
-
-
-
-var button2 = document.querySelector('li')
-button2.addEventListener("mouseleave",function(){
-	document.getElementById("demo").remove();
-
+// 	document.getElementById("demo").innerHTML="<span style='color:red; font-weight:bolder; font-size:2em;'>Please enter value</span>";
 	
-})
+// }	
+// })
+
+
 
 
 
 
 // U web code
 
-// var button = document.getElementById("enter");
-// var input = document.getElementById("userinput");
-// var ul = document.querySelector("ul");
+var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
 
 
-// function inputLength(){
-// 	return input.value.length;
-// }
+function inputLength(){
+	return input.value.length;
+}
 
-// function ListElement(){
-// 	var li = document.createElement("li");
-// 	li.appendChild(document.createTextNode(input.value));
-// 	ul.appendChild(li);
-// 	input.value = ""
-// }
+function ListElement(){
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	input.value = ""
+}
 
 
-// button.addEventListener("click",function(){
-// 	if (inputLength() >0 ) 
-// 		ListElement()
-// })
+button.addEventListener("click",function(){
+	if (inputLength() >0 ) 
+	{
+		ListElement()
+	}
+})
 
-// input.addEventListener("keypress",function(event){
-// 	if (inputLength() >0 && event.keyCode ===13) 
-// 	ListElement()
-// })
+input.addEventListener("keypress",function(event){
+	if (inputLength() >0 && event.keyCode ===13) 
+	{
+	ListElement()
+}})

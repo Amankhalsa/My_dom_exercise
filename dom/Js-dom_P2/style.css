@@ -45,7 +45,9 @@ li{
 }
 ol>li{
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
     align-content: stretch;
     align-items: stretch;
    
@@ -54,4 +56,56 @@ ol>li{
 a{
      text-decoration: none;
      font-size: 1.5em;
+     color: green;
+     margin-left: 1px;
+     border: 1px solid blue;
+     border-radius: 10px;
+     padding: 5px;
+     display: inline-flex;
+
+}
+
+.bg-image{
+       background-image: url("summer.png");
+        background-size:cover;
+       background-size: 1200px 700px;
+        background-repeat: no-repeat;
+         height: 645px;
+        filter: blur(10px);
+        width: 1200px;
+        filter:opacity(30%)
+
+
+}
+* {
+  box-sizing: border-box;
+}
+/*.bg-image{
+    background-image: url("summer.png");
+ 
+     
+     
+       background-size: contain, cover;
+        background-position: center;
+
+
+  -webkit-filter: blur(8px);  
+  Full height 
+  
+  
+ Center and scale the image nicely
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+
+}*/
+
+.main{
+    position: absolute;
+    top: 20px;
+    align-content: center;
+    align-items: center;
+}
+body{
+    margin: 0;
 }
