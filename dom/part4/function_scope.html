@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>Varibale scope:</h1>
+
+<script type="text/javascript">
+//CODE:Scope
+// Root Scope window
+var test_variable = "test";
+function test_varibale_1() {
+//child scope
+var test_variable = "test_1";
+console.log(test_variable)
+document.write("<h2>Test variable value printed :",test_variable,"</h2>")
+
+}
+function test_varibale_2() {
+//child scope
+var test_variable = "test_2";
+console.log(test_variable)
+document.write("<h2>Test variable value printed :",test_variable,"</h2>")
+
+
+}
+function test_varibale_3() {
+//child scope
+test_variable = "test_3";
+console.log(test_variable)
+document.write("<h2>Test variable value printed :",test_variable,"</h2>")
+
+
+}
+document.write("<h2>Test variable value printed :",test_variable,"</h2>")
+
+console.log(test_variable);
+test_varibale_1();
+test_varibale_2();
+test_varibale_3();
+document.write("<h2>Test variable value printed :",test_variable,"</h2>")
+
+console.log(test_variable);
+</script>
+</body>
+</html>

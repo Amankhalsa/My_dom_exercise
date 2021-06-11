@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Switch</title>
+</head>
+<body>
+<h1>switch :</h1>
+<input type="text" id="myInput" oninput="myFunction()">
+
+
+<div><button onclick="">Click me </button>
+  
+  <p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+</div>
+<script type="text/javascript">
+	
+	//CODE:Advanced Flow Control Switch Statement.
+///else
+ //elseif 
+ //ternary Operator Switch condition ? expresion1 ! expresion 2
+
+function motion(direction)
+ { 
+ 	var move; 
+ 	switch (direction) 
+ 	{
+ 	case "up": var move = "You are flying"; 
+  document.getElementById('demo2').innerHTML=move;
+ 	
+ 		break; 
+ 	case "down": var move = "You are going down"; 
+  document.getElementById('demo2').innerHTML=move;
+
+ 		break; 
+ 	case "right":var move = "You are moving right"; 
+  document.getElementById('demo2').innerHTML=move;
+
+
+ 		break; 
+ 	case "left": var move = "You are you are moving left"; 
+  document.getElementById('demo2').innerHTML=move;
+
+ 		break;
+  }
+  
+
+  return move; 
+}
+// motion(prompt("enter direction"));
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+document.getElementById("demo").innerHTML ="You wrote :"+x;
+
+  var y =document.getElementById("myInput");
+y.addEventListener("keypress",function(event){
+  if ( event.keyCode ===13) 
+  {
+ motion(x);
+  }
+else{
+  
+  document.getElementById("demo2").innerHTML="Press enter:";
+  }
+
+})        
+
+}
+
+
+
+</script>
+
+</body>
+</html>
