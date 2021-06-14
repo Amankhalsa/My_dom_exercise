@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Amanpreet singh</title>
+	<style type="text/css">
+	table{
+		font-size: 2em;
+	border: 1px solid black;
+	border-radius: 20px;
+	display:inline-grid;
+	
+	align-content: stretch;
+	}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.input{  height: 30px;
+	font-size: 1em;
+	padding: 10px;
+	box-sizing: content-box;
+
+}
+.input2{
+	height: 50px;
+	margin: 10px;
+	padding: 10px;
+	width: 200px;
+	font-size: 1em;
+	box-sizing: content-box;
+}
+
+
+	</style>
+</head>
+<body>
+	<center>
+<table  cellpadding="10" cellspacing="10" >
+<tr></tr>
+	<th colspan="2">JavaScript calc()</th>
+	<form class="content">
+	<tr><td>Number 1:</td>
+		<td><input type="text" id="num1" name="num1"  class="input" placeholder="Enter number 1" /></td>
+	</tr>
+	<tr><td>Number 2:</td>
+		<td> <input type="text" id="num2" name="num2" placeholder="Enter number 2"  class="input"/></td>
+	</tr>
+	<tr>
+		<td>  Select :</td>
+		<td > <select name="Operator" id="op" name="op" class="input2">
+    <option value="+" >Add</option> 
+    <option value="-" >Subtract</option>
+    <option value="*" >Muliply</option>
+    <option value="/" >Divide</option>
+  </select></td>
+	</tr>
+	<tr>
+<th>Click:</th>
+		<td >
+   
+<input type="button" class="button button1"
+ value="Solve" onclick="calc()">
+
+   
+</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+	<p  id="result" name="r1"  class="input"></p>
+	
+</td>
+</tr>
+</form>
+</table>
+</center>
+<script type="text/javascript">
+function calc() {
+var D = "0";
+var A = document.getElementById("num1").value;
+var B = document.getElementById("op").value;
+var C = document.getElementById("num2").value;
+
+if (B === "+")
+{
+D = parseInt(A)+parseInt(C); 
+}
+else if(B === "-")
+{
+D = parseInt(A)-parseInt(C);
+}
+else if(B === "*")
+{
+D = parseInt(A)*parseInt(C);
+}
+else if (B === "/")
+{
+D = parseInt(A)/parseInt(C);
+}
+
+document.getElementById("result").innerHTML = D?"Result is :" +D :"wrong input";
+clear_input()
+return false;
+}
+
+function clear_input(){
+document.getElementById("num1").value="";
+document.getElementById("num2").value="";
+}
+</script>
+</body>
+</html>

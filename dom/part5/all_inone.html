@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>All in one Js</title>
+</head>
+<body>
+	<h2 id="demo">Hi John </h2>
+
+<script type="text/javascript">
+	/*
+
+	// //let + const
+const player = "player1"
+let life1 = 100;
+let level1 = true;
+if (life1 > 80) {
+let level1 = false;
+console.log('inside',level1)
+}
+console.log('outside', level1)
+const player = "player1"
+var life2 = 100;
+var level2 = true;
+if (life2 > 80) {
+var level2 = false;
+console.log('inside',level2)
+}
+console.log('outside', level2)
+consta a = function() {"very fixed that i will use in other functions"}
+const obj = {
+a : "a",
+integer : 10,
+bool : true
+}
+//Destructure
+const obj = {
+a : "a",
+integer : 10,
+bool : true
+}
+const a = obj.a;
+const integer = obj.integer;
+let bool = obj.bool;
+const {a,integer} = obj
+let {bool} = obj
+//Dynamic Propery values,
+const name = "john Dovy";
+const obj1 = {
+[name] : 'Good morning',
+[2+2]:'this is four'
+}
+const obj2 = {
+a,
+b
+}
+const name1 = "John Doe";
+const age1 = 23;
+const city1 = "jordan";
+//const hello = "This is" + myname + "He is "+ age + "lives in " + city
+const hello3 = `This is ${name1} he is ${age1} lives in ${city1}` ;
+function hello4(name1 = 'Dana White',age1= 45, city1 = 'Newyork'){
+return `This is ${name1} he is ${age1} livesin ${city1}` ;
+}
+//Arrow functions
+function subt5(a, b) {
+//return a-b
+}*/
+// var a= parseInt(prompt("enter 1st value:"));
+// var b= parseInt(prompt("enter 2nd value"));
+// var c =a-b;
+const subt4 = (a,b) => a - b; /* ="Hi john"*/
+
+var c=parseInt(prompt("enter 1st value:"));
+var d=parseInt(prompt("enter 2nd value"));
+document.getElementById("demo").innerHTML= "Resut is :"+c+" and "+d+" = " +subt4(c,d);
+
+</script>
+</body>
+</html>

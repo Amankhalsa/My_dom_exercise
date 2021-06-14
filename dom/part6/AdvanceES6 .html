@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ES6</title>
+	<style type="text/css">
+		.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0)); box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6); }
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6); 
+}
+	</style>
+</head>
+<body>
+<button class="favorite styled"  type="button" onclick="thirdfun();"> Third fun </button>
+<button class="favorite styled"  type="button" onclick="first()"> first</button>
+<button class="favorite styled"  type="button" onclick="second()"> second</button>
+<button class="favorite styled"  type="button" onclick="cfun()"> Check Result </button>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+
+<script type="text/javascript">
+	
+//Code:Advanced Functions
+//-----------------------
+//Closure
+// const first = () => {
+
+// const test = "<h1>Hi i am in first function </h1>";
+// 	// document.getElementById("demo").innerHTML=test;
+
+// 	const second = () =>{
+// 	const var2 = "im from 2nd function";
+// 	document.getElementById("demo").innerHTML=test;
+// 	 alert(var2);
+// 			}
+// 	return second;
+// }
+// const thirdfun = first()
+
+//carrying
+// const fun1 = (a,b) => a*b;
+// const carryfun1 = (a) => (b) => a*b;
+// const result = carryfun1(3)
+// //Compose
+// const compose  = (fun1,fun2) =>(output)=>fun1(fun2(output));
+// const cube = (num) =>num*2;
+// compose(cube,cube)(3);
+// //
+
+const afun= () => {
+		const x=parseInt(prompt("enter value 1:"));
+		const y=parseInt(prompt("enter value 2:"));
+		
+	const bfun =() => {
+		const c=x+y;
+			// alert("Result is :"+c);
+			document.getElementById('demo').innerHTML="<h1>Result is :"+c+"</h1>";
+		}
+		return bfun;
+}
+const cfun = afun();
+
+</script>
+</body>
+</html>
