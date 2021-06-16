@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*var player={
+		name:"Sachin",
+		age:28,
+		field:["batting","sixer"]
+	}
+	document.write("name of player:",player.name )
+
+	document.write("<br> field: ",player.field[0])*/
+
+	// Code:Data Structure Objects
+
+var list = {"name":"item1","Class":"item2", "3":"item3","4": "item4"}
+
+var object = {key1:'item1',key2:2,key3:false}
+var player = {
+	name: 'Tendulkar',
+	age: 28,
+	height: 5.7,
+	married: true,
+	fields: ['batting','bowling','fielding','wicket_keeping'],
+	shout: function() {
+	console.log('Shaba shaba take it easy');
+}
+}
+console.log(player)
+var fields = ['batting','bowling','fielding','wicket_keeping']
+var object_holder = [{
+	name: 'Tendulkar',
+	age: 28,
+	height: 5.7,
+	married: true,
+	fields: ['batting','bowling','fielding','wicket_keeping']
+},
+{
+	name: 'Dhoni',
+	age: 28,
+	height: 5.7,
+	married: false,
+	fields: ['batting','bowling','wicket_keeping']
+	}
+	]
+	document.write(fields,"<br>");
+	document.write("Name is : ",object_holder[0].name);
+
+	document.write("<br>fields : ",object_holder[0].fields[1]);
+	document.write("<br>")
+// fLen = list.length;
+
+document.write(list.name)
+</script>
+</body>
+</html>

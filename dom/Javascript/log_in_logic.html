@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+ <html> <head>
+  <title>login logic by js</title>
+  <style type="text/css">
+  	.btn{
+  		text-align: center;
+  	}
+  </style>
+   </head>
+    <body>
+    	<button onclick="call_me();" class="btn">
+    		call me 
+    	</button>
+    	<center><form>
+		<label>Enter user name:</label><br>
+		<input type="text" name="uname" placeholder="User name" id="uname"><br>
+		<label>Enter Password:</label><br>
+		<input type="Password" name="upass" placeholder="Password" id="upass"><br>
+		<input type="submit" name="submit" value="Submit" onclick="">
+    	</form></center>
+<script type="text/javascript"> // Code:JAVA 
+var database = [
+{
+	username: 'aman', password: 'pass1'
+},
+{
+	username: 'preet', password: 'pass2'
+},
+{
+	username: 'singh', password: 'pass3'
+}, 
+]; 
+var newsFeed =[
+{username:'john', timeline:'Yeah i am so exited'},
+{username:'Tommy', timeline:'Yeah i am so tired'}
+]; 
+// var flen=newsFeed.length()
+	function call_me(){
+		
+var userNamePrompt =prompt('Please enter you username'); 
+var passwordPrompt = prompt ('Please enter you password');
+// var userNamePrompt =document.getElementById("uname");
+// var userNamePrompt =document.getElementById("upass");
+
+function ValidUser(user,pass)
+{
+	for(i=0; i<database.length; i++)
+
+	{
+		if (database[i].username ===user && database [i].password===pass)
+
+			{
+				return true 
+			} 
+	} 
+	return false 
+} 
+
+function signIn(user,pass)
+ {
+ 	if (ValidUser(user,pass))
+	{
+		// console.log(newsFeed); 
+
+				console.log(newsFeed);
+				document.write(newsFeed[0].username);
+				document.write(newsFeed[0].timeline);
+
+			
+	} 
+	else 
+		{
+			alert('Your password and Username does not match');
+		 }
+ } 
+			signIn(userNamePrompt,passwordPrompt) 
+			} 
+</script> 
+</body>
+ </html>
